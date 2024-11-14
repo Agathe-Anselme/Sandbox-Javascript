@@ -81,9 +81,9 @@ console.log(Agathe);
 const agatheNew = `I'm ${firstName}, a ${year - birthYear} year old ${job}`;
 console.log(agatheNew);
 
-console.log(`Just a regular string...`)
+console.log("Just a regular string...")
 
-console.log('String with \n\ multiple \n\ lines ')
+console.log("String with \n\ multiple \n\ lines.")
 
 const age = 15;
 
@@ -104,6 +104,7 @@ if(birthYear <= 2000) {
 }
 console.log(century);
 
+//Calculate BMI
 const massMark = 78;
 const heightMark = 1.69;
 const massJohn = 92;
@@ -116,19 +117,20 @@ console.log(BMIMark, BMIJohn);
 if (BMIMark > BMIJohn) {
     console.log(`Mark's BMI (${BMIMark}) is higher than John's (${BMIJohn})!`)
 } else {
-    console.log(`John's BMI is higher than Mark's!`)
+    console.log("John's BMI is higher than Mark's!")
 }
-*/ 
 
+
+//Introduction to conditions
 const inputYear = '1991';
 console.log(Number(inputYear), inputYear);
 console.log(Number(inputYear) + 18);
 
+//const age = 40;
+//if(age === 40) 
+//console.log("You're getting old");
 
-const age = 40;
-if(age === 40) 
-console.log("You're getting old");
-
+//Boolean logic
 const favourite = Number(prompt("What's your favourite number?"));
 console.log(favourite);
 console.log(typeof favourite);
@@ -142,3 +144,44 @@ if (favourite === 23) { // 22 === 23 => FALSE
 }
 
 if (favourite !== 23) console.log("Why not 23?");
+
+
+//Logical operators
+const hasDriversLicense = true; // A
+const hasGoodVision = true; // B
+
+console.log(hasDriversLicense && hasGoodVision);
+console.log(hasDriversLicense || hasGoodVision);
+console.log(!hasDriversLicense);
+
+const shouldDrive = hasDriversLicense && hasGoodVision;
+
+//if(shouldDrive) {
+//    console.log("Sarah is able to drive!")
+//} else {
+//    console.log("Someone else should drive...");
+//}
+
+const isTired = false; // C
+console.log(hasDriversLicense && hasGoodVision && isTired);
+
+if (hasDriversLicense && hasGoodVision && !isTired) {
+    console.log("Sarah is able to drive!");
+} else {
+    console.log("Someone else should drive...");
+}
+*/
+const day = "Tuesday";
+
+switch(day){
+    case "Monday": //day === "Monday"
+        console.log("Plan course structure");
+        console.log("Go to coding meetup");
+        break;
+    case "Tuesday":
+        console.log("Prepare theory videos");
+        break;
+    case "Wednesday":
+        console.log("Enjoy the day off");
+        break;
+}
