@@ -103,7 +103,6 @@ if(birthYear <= 2000) {
     century = 21;
 }
 console.log(century);
-*/ 
 
 const massMark = 78;
 const heightMark = 1.69;
@@ -119,4 +118,27 @@ if (BMIMark > BMIJohn) {
 } else {
     console.log(`John's BMI is higher than Mark's!`)
 }
+*/ 
 
+const inputYear = '1991';
+console.log(Number(inputYear), inputYear);
+console.log(Number(inputYear) + 18);
+
+
+const age = 40;
+if(age === 40) 
+console.log("You're getting old");
+
+const favourite = Number(prompt("What's your favourite number?"));
+console.log(favourite);
+console.log(typeof favourite);
+
+if (favourite === 23) { // 22 === 23 => FALSE
+    console.log("Cool! 23 is an amazing number)")
+} else if(favourite === 7) {
+    console.log("7 is also a cool number")
+} else {
+    console.log("Number is not 23 or 7")
+}
+
+if (favourite !== 23) console.log("Why not 23?");
