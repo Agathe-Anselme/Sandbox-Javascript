@@ -170,7 +170,7 @@ if (hasDriversLicense && hasGoodVision && !isTired) {
 } else {
     console.log("Someone else should drive...");
 }
-*/
+
 const day = "Tuesday";
 
 switch(day){
@@ -184,4 +184,26 @@ switch(day){
     case "Wednesday":
         console.log("Enjoy the day off");
         break;
+       default:
+        console.log("Not a valid day!"); 
 }
+
+//Conditional ternary operators
+const drink = age >= 18 ? "wine" : "water";
+console.log(drink);
+
+let drink2;
+if(age >= 18) {
+    drink2 = "wine";
+} else {
+    drink2 = "water";
+}
+console.log(drink2);
+
+console.log(`I like to drink ${age >= 18 ? "wine" : "water"}`);
+
+
+const bill = 275;
+const tip = bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.20
+console.log(`The bill was ${bill}, the tip was ${tip}, and the total was ${bill + tip}`);
+*/ 
