@@ -1,28 +1,30 @@
+"use strict";
+
 let js = "amazing";
 if (js === "amazing") alert("Javascript is fun!");
 
 /*
-//Introduction to console.log
+// 1. Introduction to console.log
 console.log(40 + 8 + 23 - 10);
 console.log("Jonas");
 console.log(23);
 
-//Introduction to variables
+// 2. Introduction to variables
 let firstName = "Agathe";
 console.log(firstName);
 console.log(firstName);
 
-// Variable name conventions : Camel case
+// 3. Variable name conventions : Camel case
 let myFirstJob = "Farmer";
 let myCurrentJob = "Programmer";
 
-//Declaration of variables
+// 4. Declaration of variables
 let country = "France";
 let continent = "Europe";
 console.log(country);
 console.log(continent);
 
-// Data type in Javascript
+// 5. Data type in Javascript
 let javascriptIsFun = true;
 console.log(javascriptIsFun);
 console.log(typeof true);
@@ -35,14 +37,14 @@ console.log(typeof year);
 year = 1991;
 console.log(typeof year);
 
-// Mutating variables
+// 6. Mutating variables
 let age = 30;
 age = 31;
 
-//const or let ?
+// 7. const or let ?
 const birthYear = 1991;
 
-// Operators
+// 8. Operators
 const ageAgathe = 2024 - 1984; 
 console.log(ageAgathe);
 let now = 2024;
@@ -53,12 +55,12 @@ console.log(ageAgathe, ageMilo, ageSacha);
 console.log(ageAgathe *2, ageAgathe / 10, 2 ** 3)
 // 2 ** 3 means 2 to the power of 3 = 2 * 2 * 2
 
-// Concatenation
+// 9. Concatenation
 const firstName = "Agathe";
 const lastName = "Anselme";
 console.log(firstName + " " + lastName)
 
-//Assignment operators
+// 10. Assignment operators
 let x = 10 + 5; // 15
 x += 10; // x = x + 10 = 25
 x *= 4; // x = x * 4 = 100
@@ -66,7 +68,7 @@ x++; // x = x + 1
 x--;
 console.log(x);
 
-// Comparison operators
+// 11. Comparison operators
 console.log(ageAgathe > ageMilo); // >, <, >=, <=
 console.log(ageMilo >= 18);
 console.log(now - 1991 > now - 2018);
@@ -85,6 +87,7 @@ console.log("Just a regular string...")
 
 console.log("String with \n\ multiple \n\ lines.")
 
+// 12. Conditions
 const age = 15;
 
 if(age>=18) {
@@ -104,7 +107,7 @@ if(birthYear <= 2000) {
 }
 console.log(century);
 
-//Calculate BMI
+// 13. Calculate BMI
 const massMark = 78;
 const heightMark = 1.69;
 const massJohn = 92;
@@ -120,17 +123,15 @@ if (BMIMark > BMIJohn) {
     console.log("John's BMI is higher than Mark's!")
 }
 
-
-//Introduction to conditions
-const inputYear = '1991';
-console.log(Number(inputYear), inputYear);
-console.log(Number(inputYear) + 18);
+//const inputYear = '1991';
+//console.log(Number(inputYear), inputYear);
+//console.log(Number(inputYear) + 18);
 
 //const age = 40;
 //if(age === 40) 
 //console.log("You're getting old");
 
-//Boolean logic
+// 14. Boolean logic
 const favourite = Number(prompt("What's your favourite number?"));
 console.log(favourite);
 console.log(typeof favourite);
@@ -146,7 +147,7 @@ if (favourite === 23) { // 22 === 23 => FALSE
 if (favourite !== 23) console.log("Why not 23?");
 
 
-//Logical operators
+// 15. Logical operators
 const hasDriversLicense = true; // A
 const hasGoodVision = true; // B
 
@@ -154,9 +155,9 @@ console.log(hasDriversLicense && hasGoodVision);
 console.log(hasDriversLicense || hasGoodVision);
 console.log(!hasDriversLicense);
 
-const shouldDrive = hasDriversLicense && hasGoodVision;
 
-//if(shouldDrive) {
+//const shouldDrive = hasDriversLicense && hasGoodVision;
+//  if(shouldDrive) {
 //    console.log("Sarah is able to drive!")
 //} else {
 //    console.log("Someone else should drive...");
@@ -188,7 +189,7 @@ switch(day){
         console.log("Not a valid day!"); 
 }
 
-//Conditional ternary operators
+// 16. Conditional ternary operators
 const drink = age >= 18 ? "wine" : "water";
 console.log(drink);
 
@@ -206,4 +207,45 @@ console.log(`I like to drink ${age >= 18 ? "wine" : "water"}`);
 const bill = 275;
 const tip = bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.20
 console.log(`The bill was ${bill}, the tip was ${tip}, and the total was ${bill + tip}`);
+
+
+function logger() {
+    console.log("My name is Agathe");
+}
+// calling / running / invoking function
+logger();
+logger();
+
+function fruitProcessor(apples, oranges) {
+    const juice = `Juice with ${apples} apples and ${oranges} oranges.`;
+    return juice;
+}
+
+const appleJuice = fruitProcessor(5,0);
+console.log(appleJuice);
+
+const appleOrangeJuice = fruitProcessor (2, 2);
+console.log(appleOrangeJuice);
+
+
+// 17. Function expression
+const calcAge2 = function (birthYear) {
+    return 2037 - birthYear;
+}
+
+// 18. Arrow function
+const calcAge3 = birthYear => 2024 - birthYear;
+const age3 = calcAge3(1984);
+console.log(age3);
+
+const yearUntilRetirement = (birthYear, firstName) => {
+    const age = 2037 - birthYear;
+    const retirement = 65 - age;
+}
 */ 
+
+//Functions calling other functions
+function fruitProcessor(apples, oranges) {
+    const juice = `Juice with ${apples} apples and ${oranges} oranges.`;
+    return juice;
+}
